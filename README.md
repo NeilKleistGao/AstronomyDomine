@@ -9,3 +9,6 @@ However, there is still something you need to configure manually.
 If you don't need characters from CJK sets, you can skip this step.
 You can execute `M-x cnfonts-edit-profile` to configure the alignment of different characters.
 
+## Dependencies
+- cnfonts
+
