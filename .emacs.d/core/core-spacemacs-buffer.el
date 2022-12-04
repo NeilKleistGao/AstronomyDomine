@@ -895,11 +895,17 @@ REAL-WIDTH: the real width of the line.  If the line contains an image, the size
   (widget-create 'push-button
                  :tag (propertize "Agenda" 'face 'font-lock-keyword-face)
                  :help-echo "Update your agenda list."
-                 :action (lambda (&rest ignore))
+                 :action (lambda (&rest ignore) (astronomy/open-agenda))
                  :mouse-face 'highlight
                  :follow-link "\C-m")
   (spacemacs-buffer//center-line)
-  (insert "\n"))
+  (insert "\n")
+  (let ((len (- (line-end-position)
+                (line-beginning-position))))
+    (spacemacs-buffer//center-line)
+    (setq spacemacs-buffer--buttons-position (- (line-end-position)
+                                              (line-beginning-position)
+                                              len))))
 
 (defun spacemacs-buffer//insert-string-list (list-display-name list)
   "Insert a non-interactive startup list in the home buffer.

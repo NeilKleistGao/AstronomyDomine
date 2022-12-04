@@ -184,7 +184,7 @@ It should only modify the values of Spacemacs settings."
    ;; contents, to a maximum of the full image height and a minimum of 3 line
    ;; heights. If set to a number (int or float) it is used as a constant
    ;; scaling factor for the default logo size.
-   dotspacemacs-startup-banner-scale 'auto
+   dotspacemacs-startup-banner-scale 0.5
 
    ;; List of items to show in startup buffer or an association list of
    ;; the form `(list-type . list-size)`. If nil then it is disabled.
@@ -196,7 +196,7 @@ It should only modify the values of Spacemacs settings."
    ;; pair of numbers, e.g. `(recents-by-project . (7 .  5))', where the first
    ;; number is the project limit and the second the limit on the recent files
    ;; within a project.
-   dotspacemacs-startup-lists '((todos . 10))
+   dotspacemacs-startup-lists nil
 
    ;; True if the home buffer should respond to resize events. (default t)
    dotspacemacs-startup-buffer-responsive t
