@@ -555,6 +555,9 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
       ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
       ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
   (set-frame-parameter (selected-frame) 'title "Astronomy Domine")
+
+  (setq org-todo-keywords
+      '((sequence "Pending(p!)" "In-Progress(i!)" "Stuck(s!)" "|" "Done(d!)" "Canceled(c!)")))
 )
 
 
@@ -572,6 +575,13 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  (setq org-todo-keyword-faces
+     '(("Pending" .    (:foreground "red" :weight bold))
+      ("Stuck" .       (:foreground "red" :weight bold))
+      ("In-Progress" .  (:foreground "orange" :weight bold))
+      ("Done" .        (:foreground "green" :weight bold))
+      ("Canceled" .    (:background "gray" :foreground "black"))
+  ))
 )
 
 

@@ -867,6 +867,10 @@ REAL-WIDTH: the real width of the line.  If the line contains an image, the size
 (defun spacemacs-buffer//insert-buttons ()
   "Create and insert the interactive buttons under Spacemacs banner."
   (goto-char (point-max))
+  (insert "I thought what I'd do was I'd pretend I was one of those deaf-mutes.")
+  (spacemacs-buffer//center-line)
+  (insert "\n")
+
   (widget-create 'push-button
                  :tag (propertize "Emails" 'face 'font-lock-keyword-face)
                  :help-echo "Check your emails."
@@ -884,13 +888,6 @@ REAL-WIDTH: the real width of the line.  If the line contains an image, the size
   (widget-create 'push-button
                  :tag (propertize "Code" 'face 'font-lock-keyword-face)
                  :help-echo "Open Coding Project."
-                 :action (lambda (&rest ignore))
-                 :mouse-face 'highlight
-                 :follow-link "\C-m")
-  (insert " ")
-  (widget-create 'push-button
-                 :tag (propertize "TODO" 'face 'font-lock-keyword-face)
-                 :help-echo "Update your TODO list."
                  :action (lambda (&rest ignore))
                  :mouse-face 'highlight
                  :follow-link "\C-m")
