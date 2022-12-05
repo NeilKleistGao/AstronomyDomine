@@ -9,7 +9,7 @@ My Spacemacs Configurations.
 - [x] Open Code Directory(F3)
 - [x] Agenda Settings(F4)
 - [x] Open WSL Home Directory(F12)
-- [ ] Show/Hide Project Structure
+- [x] Show/Hide Project Structure
 - [ ] Coq Support
 - [ ] FFMPEG Commands Support
 - ...
