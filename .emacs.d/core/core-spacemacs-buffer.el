@@ -887,14 +887,14 @@ REAL-WIDTH: the real width of the line.  If the line contains an image, the size
   (insert " ")
   (widget-create 'push-button
                  :tag (propertize "Code" 'face 'font-lock-keyword-face)
-                 :help-echo "Open Coding Project."
-                 :action (lambda (&rest ignore))
+                 :help-echo "Open Coding Project Directory."
+                 :action (lambda (&rest ignore) (astronomy/open-code-dir))
                  :mouse-face 'highlight
                  :follow-link "\C-m")
   (insert " ")
   (widget-create 'push-button
                  :tag (propertize "Agenda" 'face 'font-lock-keyword-face)
-                 :help-echo "Update your agenda list."
+                 :help-echo "Check your agenda."
                  :action (lambda (&rest ignore) (astronomy/open-agenda))
                  :mouse-face 'highlight
                  :follow-link "\C-m")
