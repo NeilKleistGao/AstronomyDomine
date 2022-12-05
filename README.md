@@ -26,6 +26,10 @@ AGENDA_PATH=D:/Agenda
 WSL_HOME=//wsl.localhost/Ubuntu-20.04/home/neilkleistgao
 ```
 
+### Treemacs
+TODO
+
 ## Dependencies
 - Sarasa-Gothic
 - VA-11 HALL-A(The Title Image Resource)
+- Treemacs
