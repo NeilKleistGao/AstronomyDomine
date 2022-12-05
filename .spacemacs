@@ -560,7 +560,9 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
       '((sequence "Pending(p!)" "In-Progress(i!)" "Stuck(s!)" "|" "Done(d!)" "Canceled(c!)")))
 
   (setq-default dotspacemacs-configuration-layers '(
-    (treemacs :variables treemacs-use-filewatch-mode t)))
+    (treemacs :variables treemacs-use-filewatch-mode t)
+    (treemacs :variables treemacs-project-follow-cleanup t)
+  ))
 )
 
 
@@ -585,6 +587,24 @@ before packages are loaded."
       ("Done" .        (:foreground "green" :weight bold))
       ("Canceled" .    (:background "gray" :foreground "black"))
   ))
+
+  (with-eval-after-load 'treemacs
+    (global-set-key
+      (kbd "C-.")
+      (lambda ()
+        (interactive)
+        (treemacs-add-and-display-current-project)
+      )
+    )
+
+    (global-set-key
+      (kbd "C-,")
+      (lambda ()
+        (interactive)
+        (treemacs-quit)
+      )
+    )
+  )
 )
 
 

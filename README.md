@@ -26,8 +26,10 @@ AGENDA_PATH=D:/Agenda
 WSL_HOME=//wsl.localhost/Ubuntu-20.04/home/neilkleistgao
 ```
 
+## Keybinds
 ### Treemacs
-TODO
+- `C-.` to open current project in treemacs
+- `C-,` to close treemacs
 
 ## Dependencies
 - Sarasa-Gothic
