@@ -1,6 +1,8 @@
 # AstronomyDomine
 My Spacemacs Configurations.
 
+![](https://s2.loli.net/2022/12/05/Sfw68l1qRWKyOG3.png)
+
 ## Features
 - [ ] Email Notifications(F1)
 - [ ] IC Notifications(F2)
@@ -9,6 +11,7 @@ My Spacemacs Configurations.
 - [x] Open WSL Home Directory(F12)
 - [ ] Show/Hide Project Structure
 - [ ] Coq Support
+- [ ] FFMPEG Commands Support
 - ...
 
 ## Install
@@ -22,8 +25,6 @@ CODE_PATH=D:/Code
 AGENDA_PATH=D:/Agenda
 WSL_HOME=//wsl.localhost/Ubuntu-20.04/home/neilkleistgao
 ```
-
-If you only have one agenda file, you can use the path of the file directly.
 
 ## Dependencies
 - Sarasa-Gothic
