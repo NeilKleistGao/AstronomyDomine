@@ -4,15 +4,27 @@ My Spacemacs Configurations.
 ![](https://s2.loli.net/2022/12/05/Sfw68l1qRWKyOG3.png)
 
 ## Features
+### General Features
 - [ ] Email Notifications(F1)
 - [ ] IC Notifications(F2)
 - [x] Open Code Directory(F3)
 - [x] Agenda Settings(F4)
 - [x] Open WSL Home Directory(F12)
 - [x] Show/Hide Project Structure
-- [x] Coq Support
 - [ ] FFMPEG Commands Support
 - ...
+
+### Languages Support
+- [x] Coq
+- [ ] C/C++
+- [ ] C#
+- [ ] Emacs Lisp (not checked yet)
+- [ ] GDScript
+- [ ] JavaScript
+- [ ] LaTeX
+- [x] Markdown
+- [ ] Scala
+- [ ] TypeScript
 
 ## Install
 You can move files in this project to your Emacs path to install configurations.
@@ -39,3 +51,4 @@ WSL_HOME=//wsl.localhost/Ubuntu-20.04/home/neilkleistgao
 - Sarasa-Gothic
 - VA-11 HALL-A(The Title Image Resource)
 - Treemacs
+- Coq Proof General
