@@ -37,6 +37,8 @@
 
 (load-file "../.emacs.d/astronomy-dashboard.el")
 
+(load-file "../.emacs.d/private/PG/generic/proof-site.el")
+
 ;; Remove compiled core files if they become stale or Emacs version has changed.
 (load (concat spacemacs-core-directory "core-compilation")
       nil (not init-file-debug))

@@ -10,7 +10,7 @@ My Spacemacs Configurations.
 - [x] Agenda Settings(F4)
 - [x] Open WSL Home Directory(F12)
 - [x] Show/Hide Project Structure
-- [ ] Coq Support
+- [x] Coq Support
 - [ ] FFMPEG Commands Support
 - ...
 
@@ -30,6 +30,10 @@ WSL_HOME=//wsl.localhost/Ubuntu-20.04/home/neilkleistgao
 ### Treemacs
 - `C-.` to open current project in treemacs
 - `C-,` to close treemacs
+
+### Coq
+- `C-c C-n` for next step
+- `C-c C-RET` for running to the current place.
 
 ## Dependencies
 - Sarasa-Gothic
