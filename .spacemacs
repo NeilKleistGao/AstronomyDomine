@@ -590,23 +590,19 @@ before packages are loaded."
 
   (with-eval-after-load 'treemacs
     (global-set-key
-      (kbd "C-x C-.")
+      (kbd "C-L")
       (lambda ()
         (interactive)
-        (treemacs-add-and-display-current-project)
-      )
-    )
-
-    (global-set-key
-      (kbd "C-x C-,")
-      (lambda ()
-        (interactive)
-        (treemacs-quit)
+        (treemacs)
       )
     )
   )
-)
 
+  (global-set-key
+    (kbd "C-F")
+    (lambda(v s) (interactive "sVideo Name:\nsSubtitle Name:") (astronomy/run-ffmpeg v s))
+  )
+)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.

@@ -36,6 +36,7 @@
       nil (not init-file-debug))
 
 (load-file "../.emacs.d/astronomy-dashboard.el")
+(load-file "../.emacs.d/astronomy-terminal.el")
 
 (load-file "../.emacs.d/private/PG/generic/proof-site.el")
 

@@ -12,7 +12,7 @@ My Spacemacs Configurations.
 - [x] Settings(F5)
 - [x] Open WSL Home Directory(F12)
 - [x] Show/Hide Project Structure
-- [ ] FFMPEG Commands Support
+- [x] FFMPEG Commands Support
 - ...
 
 ### Languages Support
@@ -39,6 +39,13 @@ AGENDA_PATH=D:/Agenda
 WSL_HOME=//wsl.localhost/Ubuntu-20.04/home/neilkleistgao
 ```
 
+### FFMPEG
+You need to install ffmpeg manumally. Make sure `ffmpeg` is available in your terminal. Please set the video directory before executing `ffmpeg`:
+e.g.
+```
+FFMPEG_WORKDIR=D:/Videos/烤肉
+```
+
 ## Keybinds
 ### Treemacs
 - `C-x C-.` to open current project in treemacs
@@ -48,8 +55,12 @@ WSL_HOME=//wsl.localhost/Ubuntu-20.04/home/neilkleistgao
 - `C-c C-n` for next step
 - `C-c C-RET` for running to the current place.
 
+### FFMPEG
+- `C-F` for executing `ffmpeg`, be sure that the video's suffix name is `mp4` and subtitles' suffix name is `ass`. You can get the result in the sama direcotry with a `Final.mp4` suffix.
+
 ## Dependencies
 - Sarasa-Gothic
 - VA-11 HALL-A(The Title Image Resource)
 - Treemacs
 - Coq Proof General
+
