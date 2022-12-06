@@ -24,7 +24,7 @@ My Spacemacs Configurations.
 - [ ] JavaScript
 - [ ] LaTeX
 - [x] Markdown
-- [ ] Scala
+- [x] Scala
 - [ ] TypeScript
 
 ## Install
@@ -49,6 +49,7 @@ FFMPEG_WORKDIR=D:/Videos/烤肉
 ## Keybinds
 ### Treemacs
 - `C-F` to open/close treemacs
+- `C->` to add current project to treemacs
 
 ### Coq
 - `C-c C-n` for next step

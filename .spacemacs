@@ -44,16 +44,16 @@ This function should only modify configuration layer settings."
      ;; git
      helm
      ;; lsp
-     ;; markdown
      multiple-cursors
      ;; org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
+      (shell :variables
+             shell-default-height 30
+             shell-default-position 'bottom)
      ;; spell-checking
      ;; syntax-checking
      ;; version-control
-     treemacs)
+     treemacs
+     scala)
 
 
    ;; List of additional packages that will be installed without being wrapped
@@ -258,6 +258,10 @@ It should only modify the values of Spacemacs settings."
                             :size 16
                             :weight normal
                             :width normal)
+
+   ;; Fonts
+   ;; (unicode-fonts :variables unicode-fonts-enable-ligatures t)
+
 
    ;; The leader key (default "SPC")
    dotspacemacs-leader-key "SPC"
@@ -571,6 +575,12 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 This function is called only while dumping Spacemacs configuration. You can
 `require' or `load' the libraries of your choice that will be included in the
 dump."
+  ;;(setq-default dotspacemacs-configuration-layers '(
+  ;;  (scala :variables scala-enable-gtags t)))
+
+  (setq-default dotspacemacs-configuration-layers '(
+    (scala :variables scala-enable-gtags t)))
+  (setq-default scala-auto-treeview t)
 )
 
 
@@ -596,12 +606,22 @@ before packages are loaded."
         (treemacs)
       )
     )
+    (global-set-key
+     (kbd "C->")
+     (lambda ()
+       (interactive)
+       (treemacs-add-and-display-current-project)
+     )
+    )
   )
 
   (global-set-key
     (kbd "C-F")
     (lambda(v s) (interactive "sVideo Name:\nsSubtitle Name:") (astronomy/run-ffmpeg v s))
   )
+
+  ;; TODO: make sure it looks good.
+  ;; (setq-default shell-file-name "C:/windows/system32/bash.exe")
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
