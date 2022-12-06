@@ -48,8 +48,7 @@ FFMPEG_WORKDIR=D:/Videos/烤肉
 
 ## Keybinds
 ### Treemacs
-- `C-x C-.` to open current project in treemacs
-- `C-x C-,` to close treemacs
+- `C-F` to open/close treemacs
 
 ### Coq
 - `C-c C-n` for next step
