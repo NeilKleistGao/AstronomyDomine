@@ -590,7 +590,7 @@ before packages are loaded."
 
   (with-eval-after-load 'treemacs
     (global-set-key
-      (kbd "C-.")
+      (kbd "C-x C-.")
       (lambda ()
         (interactive)
         (treemacs-add-and-display-current-project)
@@ -598,7 +598,7 @@ before packages are loaded."
     )
 
     (global-set-key
-      (kbd "C-,")
+      (kbd "C-x C-,")
       (lambda ()
         (interactive)
         (treemacs-quit)

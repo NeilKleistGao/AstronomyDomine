@@ -9,6 +9,7 @@ My Spacemacs Configurations.
 - [ ] IC Notifications(F2)
 - [x] Open Code Directory(F3)
 - [x] Agenda Settings(F4)
+- [x] Settings(F5)
 - [x] Open WSL Home Directory(F12)
 - [x] Show/Hide Project Structure
 - [ ] FFMPEG Commands Support
@@ -18,7 +19,7 @@ My Spacemacs Configurations.
 - [x] Coq
 - [ ] C/C++
 - [ ] C#
-- [ ] Emacs Lisp (not checked yet)
+- [x] Emacs Lisp (default)
 - [ ] GDScript
 - [ ] JavaScript
 - [ ] LaTeX
@@ -40,8 +41,8 @@ WSL_HOME=//wsl.localhost/Ubuntu-20.04/home/neilkleistgao
 
 ## Keybinds
 ### Treemacs
-- `C-.` to open current project in treemacs
-- `C-,` to close treemacs
+- `C-x C-.` to open current project in treemacs
+- `C-x C-,` to close treemacs
 
 ### Coq
 - `C-c C-n` for next step
