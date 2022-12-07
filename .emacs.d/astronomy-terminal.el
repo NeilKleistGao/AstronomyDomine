@@ -5,3 +5,7 @@
   )
  )
 
+(defun astronomy/compile-latex(filename)
+  (async-shell-command (concat "xelatex " filename))
+)
+

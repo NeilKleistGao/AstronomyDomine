@@ -22,7 +22,7 @@ My Spacemacs Configurations.
 - [x] Emacs Lisp (default)
 - [ ] GDScript
 - [ ] JavaScript
-- [ ] LaTeX
+- [x] LaTeX
 - [x] Markdown
 - [x] Scala
 - [ ] TypeScript
@@ -65,6 +65,10 @@ from PyQt6 import QtWebEngineWidgets as NeverUsed # noqa
 python -m pip install epc
 ```
 
+### LaTeX
+To enable LaTeX LSP and compilation, you need to install `texlab` and `xelatex` manually.
+Besure they can be reached in the terminal.
+
 ## Keybinds
 ### Treemacs
 - `C-F` to open/close treemacs
@@ -84,5 +88,6 @@ python -m pip install epc
 - Coq Proof General
 - Scala Metals
 - EAF(emacs-application-framework)
-
+- texlab
+- xelatex
 

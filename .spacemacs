@@ -43,7 +43,7 @@ This function should only modify configuration layer settings."
      emacs-lisp
      ;; git
      helm
-     ;; lsp
+     lsp
      multiple-cursors
      ;; org
       (shell :variables
@@ -53,7 +53,8 @@ This function should only modify configuration layer settings."
      ;; syntax-checking
      ;; version-control
      treemacs
-     scala)
+     scala
+     latex)
 
 
    ;; List of additional packages that will be installed without being wrapped
@@ -598,6 +599,9 @@ before packages are loaded."
       ("Canceled" .    (:background "gray" :foreground "black"))
   ))
 
+  (setq-default dotspacemacs-configuration-layers
+    '((latex :variables latex-backend 'lsp)))
+
   (with-eval-after-load 'treemacs
     (global-set-key
       (kbd "C-L")
@@ -620,6 +624,11 @@ before packages are loaded."
     (lambda(v s) (interactive "sVideo Name:\nsSubtitle Name:") (astronomy/run-ffmpeg v s))
   )
 
+  (global-set-key
+    (kbd "C-E")
+    (lambda (f) (interactive "sFilename:") (astronomy/compile-latex f))
+  )
+
   ;; TODO: make sure it looks good.
   ;; (setq-default shell-file-name "C:/windows/system32/bash.exe")
 )
@@ -637,7 +646,8 @@ This function is called at the very end of Spacemacs initialization."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(treemacs-magit dashboard company-emoji company emoji-cheat-sheet-plus gh-md markdown-toc markdown-mode mmm-mode valign vmd-mode ws-butler writeroom-mode winum which-key volatile-highlights vim-powerline vi-tilde-fringe uuidgen use-package undo-tree treemacs-projectile treemacs-persp treemacs-icons-dired toc-org term-cursor symon symbol-overlay string-inflection string-edit-at-point spacemacs-whitespace-cleanup spacemacs-purpose-popwin spaceline-all-the-icons space-doc restart-emacs request rainbow-delimiters quickrun popwin pcre2el password-generator paradox overseer org-superstar open-junk-file nameless multi-line macrostep lorem-ipsum link-hint inspector info+ indent-guide hybrid-mode hungry-delete holy-mode hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-org helm-mode-manager helm-make helm-descbinds helm-ag google-translate golden-ratio font-lock+ flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-evilified-state evil-escape evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu emr elisp-slime-nav elisp-def editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish devdocs define-word column-enforce-mode cnfonts clean-aindent-mode centered-cursor-mode auto-highlight-symbol auto-compile aggressive-indent ace-link ace-jump-helm-line)))
+   '(treemacs-magit dashboard company-emoji company emoji-cheat-sheet-plus gh-md markdown-toc markdown-mode mmm-mode valign vmd-mode ws-butler writeroom-mode winum which-key volatile-highlights vim-powerline vi-tilde-fringe uuidgen use-package undo-tree treemacs-projectile treemacs-persp treemacs-icons-dired toc-org term-cursor symon symbol-overlay string-inflection string-edit-at-point spacemacs-whitespace-cleanup spacemacs-purpose-popwin spaceline-all-the-icons space-doc restart-emacs request rainbow-delimiters quickrun popwin pcre2el password-generator paradox overseer org-superstar open-junk-file nameless multi-line macrostep lorem-ipsum link-hint inspector info+ indent-guide hybrid-mode hungry-delete holy-mode hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-org helm-mode-manager helm-make helm-descbinds helm-ag google-translate golden-ratio font-lock+ flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-evilified-state evil-escape evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu emr elisp-slime-nav elisp-def editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish devdocs define-word column-enforce-mode cnfonts clean-aindent-mode centered-cursor-mode auto-highlight-symbol auto-compile aggressive-indent ace-link ace-jump-helm-line))
+ '(warning-suppress-log-types '(((evil-collection)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
