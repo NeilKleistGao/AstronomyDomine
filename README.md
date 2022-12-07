@@ -13,6 +13,9 @@ My Spacemacs Configurations.
 - [x] Open WSL Home Directory(F12)
 - [x] Show/Hide Project Structure
 - [x] FFMPEG Commands Support
+- [ ] Netease Music
+- [ ] WSL zsh terminal
+- [ ] Image Preview
 - ...
 
 ### Languages Support
