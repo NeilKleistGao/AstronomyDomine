@@ -46,6 +46,25 @@ e.g.
 FFMPEG_WORKDIR=D:/Videos/烤肉
 ```
 
+### EAF
+After cloning `eaf`, you need to install dependencies manually:
+```shell
+python install-eaf.py
+```
+
+Some options are necessary in this configurations:
+- eaf-pdf-viewer
+
+If `eaf-open` can not open a pdf file, here is my solution.
+- Comment out this line of code:
+```python
+from PyQt6 import QtWebEngineWidgets as NeverUsed # noqa
+```
+- Install `epc` manually
+```shell
+python -m pip install epc
+```
+
 ## Keybinds
 ### Treemacs
 - `C-F` to open/close treemacs
@@ -63,4 +82,7 @@ FFMPEG_WORKDIR=D:/Videos/烤肉
 - VA-11 HALL-A(The Title Image Resource)
 - Treemacs
 - Coq Proof General
+- Scala Metals
+- EAF(emacs-application-framework)
+
 

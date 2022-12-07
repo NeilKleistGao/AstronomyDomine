@@ -40,6 +40,10 @@
 
 (load-file "../.emacs.d/private/PG/generic/proof-site.el")
 
+(add-to-list 'load-path "~/.emacs.d/site-lisp/emacs-application-framework/")
+(require 'eaf)
+(require 'eaf-pdf-viewer)
+
 ;; Remove compiled core files if they become stale or Emacs version has changed.
 (load (concat spacemacs-core-directory "core-compilation")
       nil (not init-file-debug))
