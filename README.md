@@ -16,12 +16,14 @@ My Spacemacs Configurations.
 - [ ] Netease Music
 - [ ] WSL zsh terminal
 - [ ] Image Preview
+- [ ] Markdown Preview
 - ...
 
 ### Languages Support
+- [ ] Clojure
 - [x] Coq
 - [ ] C/C++
-- [ ] C#
+- [x] C#
 - [x] Emacs Lisp (default)
 - [ ] GDScript
 - [ ] JavaScript
@@ -79,6 +81,12 @@ npm install -g typescript
 npm install -g typescript-language-server
 ```
 
+### OmniSharp
+Please install OmniSharp manually, and indicate the path like this:
+```
+OMNISHARP_HOME=C:\Program Files (x86)\omnisharp\OmniSharp.exe
+```
+
 ## Keybinds
 ### Treemacs
 - `C-F` to open/close treemacs
@@ -94,6 +102,9 @@ npm install -g typescript-language-server
 ### LeTaX
  - `C-E` to compile `.tex` files in current directory. You need to provide full filenames.
 
+### C#
+- `M-.` to go to the definition.
+
 ## Dependencies
 - Sarasa-Gothic
 - VA-11 HALL-A(The Title Image Resource)
@@ -105,4 +116,5 @@ npm install -g typescript-language-server
 - xelatex
 - npm
 - typescript
+- OmniSharp
 

@@ -55,7 +55,8 @@ This function should only modify configuration layer settings."
      treemacs
      scala
      latex
-     typescript)
+     typescript
+     csharp)
 
 
    ;; List of additional packages that will be installed without being wrapped
@@ -603,6 +604,8 @@ before packages are loaded."
   (setq-default dotspacemacs-configuration-layers
     '((latex :variables latex-backend 'lsp)))
 
+  (setq omnisharp-server-executable-path (getenv "OMNISHARP_HOME"))
+
   (with-eval-after-load 'treemacs
     (global-set-key
       (kbd "C-L")
@@ -628,6 +631,12 @@ before packages are loaded."
   (global-set-key
     (kbd "C-E")
     (lambda (f) (interactive "sFilename:") (astronomy/compile-latex f))
+  )
+
+  (add-hook 'csharp-mode-hook
+    (lambda()
+      (local-set-key (kbd "M-.") 'omnisharp-go-to-definition)
+    )
   )
 
   ;; TODO: make sure it looks good.
