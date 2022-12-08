@@ -54,7 +54,8 @@ This function should only modify configuration layer settings."
      ;; version-control
      treemacs
      scala
-     latex)
+     latex
+     typescript)
 
 
    ;; List of additional packages that will be installed without being wrapped

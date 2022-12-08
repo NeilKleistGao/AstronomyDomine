@@ -28,7 +28,7 @@ My Spacemacs Configurations.
 - [x] LaTeX
 - [x] Markdown
 - [x] Scala
-- [ ] TypeScript
+- [x] TypeScript
 
 ## Install
 You can move files in this project to your Emacs path to install configurations.
@@ -72,6 +72,13 @@ python -m pip install epc
 To enable LaTeX LSP and compilation, you need to install `texlab` and `xelatex` manually.
 Besure they can be reached in the terminal.
 
+### TypeScript
+To enbale TypeScript LSP, you need to make sure that you have installed typescript and the server.
+```shell
+npm install -g typescript
+npm install -g typescript-language-server
+```
+
 ## Keybinds
 ### Treemacs
 - `C-F` to open/close treemacs
@@ -84,6 +91,9 @@ Besure they can be reached in the terminal.
 ### FFMPEG
 - `C-F` for executing `ffmpeg`, be sure that the video's suffix name is `mp4` and subtitles' suffix name is `ass`. You can get the result in the sama direcotry with a `Final.mp4` suffix.
 
+### LeTaX
+ - `C-E` to compile `.tex` files in current directory. You need to provide full filenames.
+
 ## Dependencies
 - Sarasa-Gothic
 - VA-11 HALL-A(The Title Image Resource)
@@ -93,4 +103,6 @@ Besure they can be reached in the terminal.
 - EAF(emacs-application-framework)
 - texlab
 - xelatex
+- npm
+- typescript
 
