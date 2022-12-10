@@ -56,7 +56,8 @@ This function should only modify configuration layer settings."
      scala
      latex
      typescript
-     csharp)
+     csharp
+     clojure)
 
 
    ;; List of additional packages that will be installed without being wrapped
@@ -638,6 +639,10 @@ before packages are loaded."
       (local-set-key (kbd "M-.") 'omnisharp-go-to-definition)
     )
   )
+
+  (setq-default indent-tabs-mode nil)
+  (setq-default tab-width 2)
+  (setq indent-line-function 'insert-tab)
 
   ;; TODO: make sure it looks good.
   ;; (setq-default shell-file-name "C:/windows/system32/bash.exe")

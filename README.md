@@ -17,10 +17,11 @@ My Spacemacs Configurations.
 - [ ] WSL zsh terminal
 - [ ] Image Preview
 - [ ] Markdown Preview
+- [ ] Godot Engine Development
 - ...
 
 ### Languages Support
-- [ ] Clojure
+- [x] Clojure (no test yet)
 - [x] Coq
 - [ ] C/C++
 - [x] C#
