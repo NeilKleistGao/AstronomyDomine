@@ -17,7 +17,7 @@ My Spacemacs Configurations.
 - [ ] WSL zsh terminal
 - [ ] Image Preview
 - [ ] Markdown Preview
-- [ ] Godot Engine Development
+- [x] Godot Engine Development
 - ...
 
 ### Languages Support
@@ -105,6 +105,11 @@ OMNISHARP_HOME=C:\Program Files (x86)\omnisharp\OmniSharp.exe
 
 ### C#
 - `M-.` to go to the definition.
+
+### Godot Engine Development
+- `C-c g` to compile temp godot engine.
+- `C-c d` to generate glue files.
+- `C-c t` to compile final godot engine.
 
 ## Dependencies
 - Sarasa-Gothic

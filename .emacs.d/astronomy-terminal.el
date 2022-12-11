@@ -9,3 +9,16 @@
   (async-shell-command (concat "xelatex " filename))
 )
 
+(defun astronomy/compile-temp-godot()
+  (async-shell-command "scons tools=yes module_mono_enabled=yes mono_glue=no -j15")
+)
+
+(defun astronomy/generate-glue()
+  (async-shell-command "bin\\godot.windows.editor.x86_64.mono.console.exe --generate-mono-glue modules/mono/glue"); TODO: for more platform
+  (async-shell-command "python ./modules/mono/build_scripts/build_assemblies.py --godot-output-dir ./bin")
+)
+
+(defun astronomy/compile-godot()
+  (async-shell-command "scons p=windows tools=yes module_mono_enabled=yes vsproj=yes -j15"); TODO: remove vsproj
+)
+

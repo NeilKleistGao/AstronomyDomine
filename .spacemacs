@@ -634,6 +634,21 @@ before packages are loaded."
     (lambda (f) (interactive "sFilename:") (astronomy/compile-latex f))
   )
 
+  (global-set-key
+    (kbd "C-c g")
+    (lambda() (interactive) (astronomy/compile-temp-godot))
+  )
+
+  (global-set-key
+    (kbd "C-c d")
+    (lambda() (interactive) (astronomy/generate-glue))
+  )
+
+  (global-set-key
+    (kbd "C-c t")
+    (lambda() (interactive) (astronomy/compile-godot))
+  )
+
   (add-hook 'csharp-mode-hook
     (lambda()
       (local-set-key (kbd "M-.") 'omnisharp-go-to-definition)
