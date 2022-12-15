@@ -21,7 +21,7 @@ My Spacemacs Configurations.
 - ...
 
 ### Languages Support
-- [x] Clojure (no test yet)
+- [x] Clojure
 - [x] Coq
 - [ ] C/C++
 - [x] C#
@@ -88,6 +88,9 @@ Please install OmniSharp manually, and indicate the path like this:
 OMNISHARP_HOME=C:\Program Files (x86)\omnisharp\OmniSharp.exe
 ```
 
+### Clojure
+If you can't install lsp, download the executable file [here](https://github.com/clojure-lsp/clojure-lsp).
+
 ## Keybinds
 ### Treemacs
 - `C-F` to open/close treemacs
@@ -123,4 +126,5 @@ OMNISHARP_HOME=C:\Program Files (x86)\omnisharp\OmniSharp.exe
 - npm
 - typescript
 - OmniSharp
+- Clojure-lsp
 

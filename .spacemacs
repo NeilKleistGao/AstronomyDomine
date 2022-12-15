@@ -605,6 +605,9 @@ before packages are loaded."
   (setq-default dotspacemacs-configuration-layers
     '((latex :variables latex-backend 'lsp)))
 
+  (setq-default dotspacemacs-configuration-layers
+    '((clojure :variables clojure-backend 'lsp)))
+
   (setq omnisharp-server-executable-path (getenv "OMNISHARP_HOME"))
 
   (with-eval-after-load 'treemacs
