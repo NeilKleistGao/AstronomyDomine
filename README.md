@@ -29,7 +29,7 @@ My Spacemacs Configurations.
 - [ ] GDScript
 - [ ] JavaScript
 - [x] LaTeX
-= [x] Lua
+= [x] Lua (no lsp)
 - [x] Markdown
 - [x] Scala
 - [x] TypeScript
@@ -91,6 +91,9 @@ OMNISHARP_HOME=C:\Program Files (x86)\omnisharp\OmniSharp.exe
 
 ### Clojure
 If you can't install lsp, download the executable file [here](https://github.com/clojure-lsp/clojure-lsp).
+
+### Scala
+You need to install metals lsp manually.
 
 ## Keybinds
 ### Treemacs
