@@ -57,7 +57,8 @@ This function should only modify configuration layer settings."
      latex
      typescript
      csharp
-     clojure)
+     clojure
+     lua)
 
 
    ;; List of additional packages that will be installed without being wrapped
@@ -607,6 +608,9 @@ before packages are loaded."
 
   (setq-default dotspacemacs-configuration-layers
     '((clojure :variables clojure-backend 'lsp)))
+
+  (lua :variables
+    lua-backend 'lua-mode)
 
   (setq omnisharp-server-executable-path (getenv "OMNISHARP_HOME"))
 

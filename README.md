@@ -29,6 +29,7 @@ My Spacemacs Configurations.
 - [ ] GDScript
 - [ ] JavaScript
 - [x] LaTeX
+= [x] Lua
 - [x] Markdown
 - [x] Scala
 - [x] TypeScript
