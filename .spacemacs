@@ -32,7 +32,7 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(markdown
+   '(; markdown
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -54,9 +54,9 @@ This function should only modify configuration layer settings."
      ;; version-control
      treemacs
      scala
-     latex
+     ; latex
      typescript
-     csharp
+     ; csharp
      clojure
      lua)
 
@@ -608,7 +608,7 @@ before packages are loaded."
 
   (setq-default dotspacemacs-configuration-layers
     '((clojure :variables clojure-backend 'lsp)))
-  
+
   (setq omnisharp-server-executable-path (getenv "OMNISHARP_HOME"))
 
   (with-eval-after-load 'treemacs

@@ -23,14 +23,10 @@ My Spacemacs Configurations.
 ### Languages Support
 - [x] Clojure
 - [x] Coq
-- [ ] C/C++
-- [x] C#
 - [x] Emacs Lisp (default)
 - [ ] GDScript
 - [ ] JavaScript
-- [x] LaTeX
-= [x] Lua (no lsp)
-- [x] Markdown
+- [x] Lua (no lsp)
 - [x] Scala
 - [x] TypeScript
 
@@ -72,21 +68,11 @@ from PyQt6 import QtWebEngineWidgets as NeverUsed # noqa
 python -m pip install epc
 ```
 
-### LaTeX
-To enable LaTeX LSP and compilation, you need to install `texlab` and `xelatex` manually.
-Besure they can be reached in the terminal.
-
 ### TypeScript
 To enbale TypeScript LSP, you need to make sure that you have installed typescript and the server.
 ```shell
 npm install -g typescript
 npm install -g typescript-language-server
-```
-
-### OmniSharp
-Please install OmniSharp manually, and indicate the path like this:
-```
-OMNISHARP_HOME=C:\Program Files (x86)\omnisharp\OmniSharp.exe
 ```
 
 ### Clojure
@@ -107,12 +93,6 @@ You need to install metals lsp manually.
 ### FFMPEG
 - `C-F` for executing `ffmpeg`, be sure that the video's suffix name is `mp4` and subtitles' suffix name is `ass`. You can get the result in the sama direcotry with a `Final.mp4` suffix.
 
-### LeTaX
- - `C-E` to compile `.tex` files in current directory. You need to provide full filenames.
-
-### C#
-- `M-.` to go to the definition.
-
 ### Godot Engine Development
 - `C-c g` to compile temp godot engine.
 - `C-c d` to generate glue files.
@@ -125,10 +105,6 @@ You need to install metals lsp manually.
 - Coq Proof General
 - Scala Metals
 - EAF(emacs-application-framework)
-- texlab
-- xelatex
 - npm
 - typescript
-- OmniSharp
 - Clojure-lsp
-
