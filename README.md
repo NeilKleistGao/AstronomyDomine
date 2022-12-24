@@ -5,7 +5,7 @@ My Spacemacs Configurations.
 
 ## Features
 ### General Features
-- [ ] Email Notifications(F1)
+- [x] Email Notifications(F1) (QQ Only)
 - [ ] IC Notifications(F2)
 - [x] Open Code Directory(F3)
 - [x] Agenda Settings(F4)
@@ -24,11 +24,6 @@ My Spacemacs Configurations.
 - [x] Clojure
 - [x] Coq
 - [x] Emacs Lisp (default)
-- [ ] GDScript
-- [ ] JavaScript
-- [x] Lua (no lsp)
-- [x] Scala
-- [x] TypeScript
 
 ## Install
 You can move files in this project to your Emacs path to install configurations.
@@ -68,18 +63,17 @@ from PyQt6 import QtWebEngineWidgets as NeverUsed # noqa
 python -m pip install epc
 ```
 
-### TypeScript
-To enbale TypeScript LSP, you need to make sure that you have installed typescript and the server.
-```shell
-npm install -g typescript
-npm install -g typescript-language-server
-```
-
 ### Clojure
 If you can't install lsp, download the executable file [here](https://github.com/clojure-lsp/clojure-lsp).
 
-### Scala
-You need to install metals lsp manually.
+### Emails
+You need to add your email information into `.spacemacs.env`:
+```
+EMAIL_ADDRESS=neilkleistgao@qq.com
+EMAIL_NAME=neilkleistgao
+```
+
+Make sure you have enabled the IMAP service, and you need to provide the authorization code when logging in.
 
 ## Keybinds
 ### Treemacs
@@ -103,8 +97,6 @@ You need to install metals lsp manually.
 - VA-11 HALL-A(The Title Image Resource)
 - Treemacs
 - Coq Proof General
-- Scala Metals
 - EAF(emacs-application-framework)
-- npm
-- typescript
 - Clojure-lsp
+- GNUS

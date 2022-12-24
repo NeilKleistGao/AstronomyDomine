@@ -1,3 +1,5 @@
+(global-set-key (kbd "<f1>") `gnus)
+
 (defun astronomy/open-code-dir()
   (interactive)
   (find-file (getenv "CODE_PATH")))

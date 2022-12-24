@@ -58,7 +58,8 @@ This function should only modify configuration layer settings."
      typescript
      ; csharp
      clojure
-     lua)
+     lua
+     gnus)
 
 
    ;; List of additional packages that will be installed without being wrapped
