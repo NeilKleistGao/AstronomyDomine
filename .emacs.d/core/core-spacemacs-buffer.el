@@ -879,9 +879,9 @@ REAL-WIDTH: the real width of the line.  If the line contains an image, the size
                  :follow-link "\C-m")
   (insert " ")
   (widget-create 'push-button
-                 :tag (propertize "IC Messages" 'face 'font-lock-keyword-face)
-                 :help-echo "Check your Immediate Chatting messages."
-                 :action (lambda (&rest ignore))
+                 :tag (propertize "Finance Statement" 'face 'font-lock-keyword-face)
+                 :help-echo "Check your finance statement."
+                 :action (lambda (&rest ignore) (astronomy/open-finance-dir))
                  :mouse-face 'highlight
                  :follow-link "\C-m")
   (insert " ")
@@ -896,6 +896,13 @@ REAL-WIDTH: the real width of the line.  If the line contains an image, the size
                  :tag (propertize "Agenda" 'face 'font-lock-keyword-face)
                  :help-echo "Check your agenda."
                  :action (lambda (&rest ignore) (astronomy/open-agenda))
+                 :mouse-face 'highlight
+                 :follow-link "\C-m")
+  (insert " ")
+  (widget-create 'push-button
+                 :tag (propertize "Settings" 'face 'font-lock-keyword-face)
+                 :help-echo "Open Emacs Directory."
+                 :action (lambda (&rest ignore) (astronomy/settings))
                  :mouse-face 'highlight
                  :follow-link "\C-m")
   (spacemacs-buffer//center-line)

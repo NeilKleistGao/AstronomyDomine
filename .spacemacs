@@ -59,7 +59,8 @@ This function should only modify configuration layer settings."
      ; csharp
      clojure
      lua
-     gnus)
+     gnus
+     finance)
 
 
    ;; List of additional packages that will be installed without being wrapped

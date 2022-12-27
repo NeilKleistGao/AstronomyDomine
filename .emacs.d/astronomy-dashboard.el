@@ -1,5 +1,10 @@
 (global-set-key (kbd "<f1>") `gnus)
 
+(defun astronomy/open-finance-dir()
+  (interactive)
+  (find-file (getenv "FINANCE_PATH")))
+(global-set-key(kbd "<f2>") 'astronomy/open-finance-dir)
+
 (defun astronomy/open-code-dir()
   (interactive)
   (find-file (getenv "CODE_PATH")))

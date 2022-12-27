@@ -6,17 +6,13 @@ My Spacemacs Configurations.
 ## Features
 ### General Features
 - [x] Email Notifications(F1) (QQ Only)
-- [ ] IC Notifications(F2)
+- [x] Finance Management(F2)
 - [x] Open Code Directory(F3)
 - [x] Agenda Settings(F4)
 - [x] Settings(F5)
 - [x] Open WSL Home Directory(F12)
 - [x] Show/Hide Project Structure
 - [x] FFMPEG Commands Support
-- [ ] Netease Music
-- [ ] WSL zsh terminal
-- [ ] Image Preview
-- [ ] Markdown Preview
 - [x] Godot Engine Development
 - ...
 
@@ -75,6 +71,12 @@ EMAIL_NAME=neilkleistgao
 
 Make sure you have enabled the IMAP service, and you need to provide the authorization code when logging in.
 
+### Ledger
+You need to install [ledger](https://www.ledger-cli.org/) manumally. Then add your finance directory into `.spacemacs.env`:
+```
+FINANCE_PATH=D:/Finance
+```
+
 ## Keybinds
 ### Treemacs
 - `C-F` to open/close treemacs
@@ -100,3 +102,4 @@ Make sure you have enabled the IMAP service, and you need to provide the authori
 - EAF(emacs-application-framework)
 - Clojure-lsp
 - GNUS
+- ledger
