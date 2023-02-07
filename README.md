@@ -10,7 +10,6 @@ My Spacemacs Configurations.
 - [x] Open Code Directory(F3)
 - [x] Agenda Settings(F4)
 - [x] Settings(F5)
-- [x] Open WSL Home Directory(F12)
 - [x] Show/Hide Project Structure
 - [x] FFMPEG Commands Support
 - [x] Godot Engine Development
@@ -40,28 +39,6 @@ e.g.
 FFMPEG_WORKDIR=D:/Videos/烤肉
 ```
 
-### EAF
-After cloning `eaf`, you need to install dependencies manually:
-```shell
-python install-eaf.py
-```
-
-Some options are necessary in this configurations:
-- eaf-pdf-viewer
-
-If `eaf-open` can not open a pdf file, here is my solution.
-- Comment out this line of code:
-```python
-from PyQt6 import QtWebEngineWidgets as NeverUsed # noqa
-```
-- Install `epc` manually
-```shell
-python -m pip install epc
-```
-
-### Clojure
-If you can't install lsp, download the executable file [here](https://github.com/clojure-lsp/clojure-lsp).
-
 ### Emails
 You need to add your email information into `.spacemacs.env`:
 ```
@@ -71,8 +48,8 @@ EMAIL_NAME=neilkleistgao
 
 Make sure you have enabled the IMAP service, and you need to provide the authorization code when logging in.
 
-### Ledger
-You need to install [ledger](https://www.ledger-cli.org/) manumally. Then add your finance directory into `.spacemacs.env`:
+### Caviar
+You need to install [caviar](https://github.com/NeilKleistGao/caviar) manumally. Then add your finance directory into `.spacemacs.env`:
 ```
 FINANCE_PATH=D:/Finance
 ```
@@ -99,7 +76,4 @@ FINANCE_PATH=D:/Finance
 - VA-11 HALL-A(The Title Image Resource)
 - Treemacs
 - Coq Proof General
-- EAF(emacs-application-framework)
-- Clojure-lsp
-- GNUS
-- ledger
+- caviar

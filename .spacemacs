@@ -38,12 +38,21 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     ;; auto-completion
-     ;; better-defaults
+     (auto-completion :variables
+                      ;; auto-completion-front-end 'auto-complete
+                      auto-completion-return-key-behavior 'complete
+                      auto-completion-tab-key-behavior 'cycle
+                      auto-completion-enable-snippets-in-popup t
+                      auto-completion-complete-with-key-sequence nil
+                      auto-completion-complete-with-key-sequence-delay 0.1
+                      )
+     better-defaults
      emacs-lisp
      ;; git
      helm
-     lsp
+     (lsp :variables
+          lsp-restart 'auto-restart
+          lsp-lens-enable t)
      multiple-cursors
      ;; org
       (shell :variables
@@ -53,12 +62,20 @@ This function should only modify configuration layer settings."
      ;; syntax-checking
      ;; version-control
      treemacs
-     scala
-     ; latex
-     typescript
+     (latex :variables
+            latex-backend 'lsp
+            latex-build-command 'latexmk
+            latex-build-engine 'xetex
+            latex-refresh-preview t
+            latex-view-pdf-in-split-window t
+            latex-view-with-pdf-tools nil
+            latex-enable-auto-fill nil
+            latex-enable-folding t)
+     ; scala
+     ; typescript
      ; csharp
-     clojure
-     lua
+     ; clojure
+     ; lua
      gnus
      finance)
 
@@ -605,14 +622,6 @@ before packages are loaded."
       ("Canceled" .    (:background "gray" :foreground "black"))
   ))
 
-  (setq-default dotspacemacs-configuration-layers
-    '((latex :variables latex-backend 'lsp)))
-
-  (setq-default dotspacemacs-configuration-layers
-    '((clojure :variables clojure-backend 'lsp)))
-
-  (setq omnisharp-server-executable-path (getenv "OMNISHARP_HOME"))
-
   (with-eval-after-load 'treemacs
     (global-set-key
       (kbd "C-L")
@@ -655,18 +664,21 @@ before packages are loaded."
     (lambda() (interactive) (astronomy/compile-godot))
   )
 
-  (add-hook 'csharp-mode-hook
-    (lambda()
-      (local-set-key (kbd "M-.") 'omnisharp-go-to-definition)
-    )
-  )
-
   (setq-default indent-tabs-mode nil)
   (setq-default tab-width 2)
   (setq indent-line-function 'insert-tab)
 
-  ;; TODO: make sure it looks good.
-  ;; (setq-default shell-file-name "C:/windows/system32/bash.exe")
+  ;; Update PDF buffers after successful LaTeX runs
+  (add-hook 'TeX-after-compilation-finished-functions
+        #'TeX-revert-document-buffer)
+
+  ;; For latex full-document previews. When you open up a compiled PDF, the
+  ;; preview will update automatically when you recompile.
+  (add-hook 'doc-view-mode-hook 'auto-revert-mode)
+
+  ;; For improving the quality of the rendered pdf in docview mode
+  (customize-set-variable 'doc-view-resolution 300)
+  (customize-set-variable 'doc-view-scale-internally nil)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -682,7 +694,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(treemacs-magit dashboard company-emoji company emoji-cheat-sheet-plus gh-md markdown-toc markdown-mode mmm-mode valign vmd-mode ws-butler writeroom-mode winum which-key volatile-highlights vim-powerline vi-tilde-fringe uuidgen use-package undo-tree treemacs-projectile treemacs-persp treemacs-icons-dired toc-org term-cursor symon symbol-overlay string-inflection string-edit-at-point spacemacs-whitespace-cleanup spacemacs-purpose-popwin spaceline-all-the-icons space-doc restart-emacs request rainbow-delimiters quickrun popwin pcre2el password-generator paradox overseer org-superstar open-junk-file nameless multi-line macrostep lorem-ipsum link-hint inspector info+ indent-guide hybrid-mode hungry-delete holy-mode hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-org helm-mode-manager helm-make helm-descbinds helm-ag google-translate golden-ratio font-lock+ flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-evilified-state evil-escape evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu emr elisp-slime-nav elisp-def editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish devdocs define-word column-enforce-mode cnfonts clean-aindent-mode centered-cursor-mode auto-highlight-symbol auto-compile aggressive-indent ace-link ace-jump-helm-line))
+   '(company-coq auctex-latexmk treemacs-magit dashboard company-emoji company emoji-cheat-sheet-plus gh-md markdown-toc markdown-mode mmm-mode valign vmd-mode ws-butler writeroom-mode winum which-key volatile-highlights vim-powerline vi-tilde-fringe uuidgen use-package undo-tree treemacs-projectile treemacs-persp treemacs-icons-dired toc-org term-cursor symon symbol-overlay string-inflection string-edit-at-point spacemacs-whitespace-cleanup spacemacs-purpose-popwin spaceline-all-the-icons space-doc restart-emacs request rainbow-delimiters quickrun popwin pcre2el password-generator paradox overseer org-superstar open-junk-file nameless multi-line macrostep lorem-ipsum link-hint inspector info+ indent-guide hybrid-mode hungry-delete holy-mode hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-org helm-mode-manager helm-make helm-descbinds helm-ag google-translate golden-ratio font-lock+ flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-evilified-state evil-escape evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu emr elisp-slime-nav elisp-def editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish devdocs define-word column-enforce-mode cnfonts clean-aindent-mode centered-cursor-mode auto-highlight-symbol auto-compile aggressive-indent ace-link ace-jump-helm-line))
  '(warning-suppress-log-types '(((evil-collection)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
